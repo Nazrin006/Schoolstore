@@ -1,0 +1,11 @@
+<!-- continue.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>Welcome to our store!</h3>
+  <p>You are now logged in. You can purchase items and explore our page by clicking on continue.</p>
+
+  <a href="{% url 'form_page' %}" class="btn btn-primary btn-sm">Continue</a>
+<!-- <a href="{% url 'form_page' " -->
+
+{% endblock %}

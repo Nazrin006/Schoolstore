@@ -1,0 +1,83 @@
+<!-- form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>Form Page</h3>
+  <form method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="dob">DOB:</label>
+    <input type="date" id="dob" name="dob" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required><br>
+      <option value="">Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br>
+
+    <label for="phone">Phone No:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="3" cols="30" required></textarea><br>
+
+    <label for="department">Department:</label>
+    <select id="department" name="department" required>
+      <option value="">Select department</option>
+      <option value="science">Science</option>
+      <option value="arts">Arts</option>
+      <option value="commerce">Commerce</option>
+    </select><br>
+
+    <label for="courses">Courses:</label>
+    <select id="courses" name="courses" required>
+      <option value="">Select courses</option>
+      <option value="math">Mathematics</option>
+      <option value="english">English</option>
+      <option value="history">History</option>
+    </select>
+
+    <label for="purpose">Purpose:</label>
+    <select id="purpose" name="purpose" required>
+      <option value="">Select purpose</option>
+      <option value="admission">Admission</option>
+      <option value="enrollment">Enrollment</option>
+      <option value="counseling">Counseling</option>
+    </select><br>
+
+    <label for="materials">Materials:</label>
+    <input type="checkbox" id="materials1" name="materials1" value="book1">
+    <label for="materials1">Book</label>
+    <input type="checkbox" id="materials2" name="materials2" value="book2">
+    <label for="materials2">Pen</label>
+    <input type="checkbox" id="materials3" name="materials3" value="book3">
+    <label for="materials3">Scale</label>
+    <input type="checkbox" id="materials4" name="materials3" value="book3">
+    <label for="materials3">Guid</label>
+     <input type="checkbox" id="materials5" name="materials3" value="book3">
+    <label for="materials3">Record Book</label>
+
+
+    <br><br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-secondary">Logout</button><br>
+    <br>
+   {% for msg in messages %}
+     {{msg}}
+   {% endfor %}
+    <br>
+    <a href="/">HOME</a>
+  </form>
+
+{% endblock %}

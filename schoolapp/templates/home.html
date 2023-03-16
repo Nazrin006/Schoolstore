@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <!-- add the navbar code here -->
+  {% include 'navbar.html' %}
+
+  <div class="container mt-5">
+    <h1>Welcome to SchoolStore</h1>
+    <p><b>Here you can find all the supplies you need for your studies.</b></p>
+    <p>What better way to prepare students for the work force than to have them help with the school store? They can help in choosing merchandise, staffing and scheduling the store, making change, and taking inventory. When the time comes, they can also help decide how to use the profits. Consider having students apply for a position, and recommend faculty references.</p>
+    <img src="https://th.bing.com/th/id/OIP._HWlpArNSsnS27WmHVhbSwHaE8?pid=ImgDet&rs=1" alt="A beautiful image">
+<!--     <button class="btn btn-primary" >Start shopping with us</button>-->
+<!--    <button type="submit" class="btn btn-primary">Submit</button>-->
+
+    <a href = "{% url 'login' %}" class="btn btn-primary btn-lg" >Start shopping with us</a>
+
+  </div>
+
+{% endblock %}
+
+
